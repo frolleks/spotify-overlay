@@ -1,0 +1,76 @@
+@import url("https://rsms.me/inter/inter.css");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter var", sans-serif;
+}
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+.background {
+  background-color: #000000c2;
+  padding: 1rem;
+  display: flex;
+  border-radius: 0.2rem;
+  align-items: center;
+}
+
+.text {
+  color: #fff;
+}
+
+.song-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  white-space: nowrap; /* Prevents the text from wrapping into new lines */
+  overflow: hidden; /* Hides the overflowing text */
+  position: relative; /* Relative positioning for the sliding effect */
+  width: 200px; /* Set an appropriate width */
+}
+
+.song-title span {
+  display: inline-block;
+  position: absolute;
+  animation: slide 10s linear infinite; /* Adjust the duration as needed */
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%); /* Starting position - fully to the right */
+  }
+  100% {
+    transform: translateX(-100%); /* Ending position - fully to the left */
+  }
+}
+
+.song-artist {
+  margin-top: 1px;
+  font-size: 14px;
+}
+
+#metadata {
+  margin-left: 16px;
+}
+
+#album-cover {
+  border-radius: 0.2rem;
+}
